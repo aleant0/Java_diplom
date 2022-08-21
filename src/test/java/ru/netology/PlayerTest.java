@@ -98,6 +98,7 @@ public class PlayerTest {
 
         player.play(game1, 3);
         player.play(game3, 1);
+        player.installGame(game1);   // повторно добавила игру, которая уже установлена, чтобы проверить метод installGame
 
         assertEquals(game1, player.mostPlayerByGenre("Аркады"));
     }
