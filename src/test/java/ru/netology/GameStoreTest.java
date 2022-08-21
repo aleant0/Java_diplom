@@ -68,7 +68,7 @@ public class GameStoreTest {
     }
 
     @Test
-    public void shouldGetMostPlayerIfNoPlayers() {
+    public void shouldGetMostPlayerIfHoursEqual() {
 
         GameStore store = new GameStore();
 
@@ -82,7 +82,7 @@ public class GameStoreTest {
     }
 
     @Test
-    public void shouldGetMostPlayerIfHoursEqual() {
+    public void shouldGetMostPlayerIfNoPlayers() {
 
         GameStore store = new GameStore();
 
