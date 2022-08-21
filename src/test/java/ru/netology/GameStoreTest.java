@@ -68,6 +68,19 @@ public class GameStoreTest {
     }
 
     @Test
+    public void shouldGetMostPlayerIfPlayerHave1Hour() {
+
+        GameStore store = new GameStore();
+
+        store.addPlayTime("Oleg",  1);
+
+        String expected = "Oleg";
+        String actual = store.getMostPlayer();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldGetMostPlayerIfHoursEqual() {
 
         GameStore store = new GameStore();
