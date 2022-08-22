@@ -47,9 +47,9 @@ public class Player {
             }
             return playedTime.get(game);
         } else {
-           throw new  RuntimeException(
-                   "Игра " + game.getTitle() + " не установлена"
-           );
+            throw new RuntimeException(
+                    "Игра " + game.getTitle() + " не установлена"
+            );
         }
     }
 
@@ -72,6 +72,21 @@ public class Player {
      * Если в игры этого жанра не играли, возвращается null
      */
     public Game mostPlayerByGenre(String genre) {
-        return null;
+        Game bestGame = null;
+        int bestTime = 0;
+        for (Game game : playedTime.keySet()) {
+            if (game.getGenre().equals(genre)) {
+                if (playedTime.get(game) > bestTime) {
+                    bestTime = playedTime.get(game);
+                    bestGame = game;
+                }
+            }
+        }
+        if (bestGame == null) {
+            return null;
+        } else {
+            return bestGame;
+        }
     }
+
 }
