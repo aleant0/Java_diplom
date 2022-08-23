@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class GameStoreTest {
 
     @Test
-    public void shouldAddGame() {
+    public void shouldAddGames() {
 
         GameStore store = new GameStore();
         Game game = store.publishGame("Нетология Баттл Онлайн", "Аркады");
