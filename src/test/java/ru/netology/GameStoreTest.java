@@ -6,12 +6,14 @@ import org.junit.jupiter.api.Test;
 public class GameStoreTest {
 
     @Test
-    public void shouldAddGame() {
+    public void shouldAddGames() {
 
         GameStore store = new GameStore();
         Game game = store.publishGame("Нетология Баттл Онлайн", "Аркады");
+        Game game2 = store.publishGame("Нетология Баттл Онлайн2", "Аркады");
+        Game game3 = store.publishGame("Нетология Баттл Онлайн3", "Аркады");
 
-        assertTrue(store.containsGame(game));
+        assertTrue(store.containsGame(game3));
     }
     
     // другие ваши тесты
